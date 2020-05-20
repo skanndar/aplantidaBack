@@ -1,33 +1,29 @@
 const express = require("express");
 const authRouter = express.Router();
-
 const createError = require("http-errors");
-
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
-
 const User = require("../models/user");
-
 
 // HELPER FUNCTIONS
 const { isLoggedIn, isNotLoggedIn, validationLogin } = require("../helpers/middlewares");
 
 // POST   '/auth/signup'
 authRouter.post('/signup', isNotLoggedIn, validationLogin, (req, res, next) => {
-  const { username, password } = req.body;
+  const {fName, lName, email, genre, password} = req.body;
 
-  User.findOne({ username })
+  User.findOne({ email })
     .then((user) => {
-      //  - check if the `username` exists, if it does send a response with an error
+      //  - check if the `email` exists, if it does send a response with an error
       if (user) {
-        return next(createError(400));
+        return next(createError(404));
       }
-      else {  //  - if `username` is unique then:
+      else {  //  - if `email` is unique then:
         //     - encrypt the password using bcrypt
         const salt = bcrypt.genSaltSync(saltRounds);
         const hashPass = bcrypt.hashSync(password, salt);
-        //     - create the new user in DB using the `username` and the encrypted password
-        User.create({ username, password: hashPass })
+        //     - create the new user in DB using the `email` and the encrypted password
+        User.create({ fName, lName, email, genre, password: hashPass })
           .then((newUser) => {
             //     - save the newly created user in the `session`
             newUser.password = "****";
@@ -46,13 +42,13 @@ authRouter.post('/signup', isNotLoggedIn, validationLogin, (req, res, next) => {
 // POST    '/auth/login'
 authRouter.post('/login', isNotLoggedIn, validationLogin, (req, res, next) => {
 
-  const { username, password } = req.body;
-  User.findOne({ username })
+  const { email, password } = req.body;
+  User.findOne({ email })
     .then((user) => {
       //  - check if user exists in the DB
       if (!user) {
         //  - if user doesn't exist - forward the error to the error middleware using `next()`
-        return next(createError(404)); // Unathorized
+        return next(createError(401)); // Unathorized
       }
       else {
         //  - check if the password is correct
@@ -77,7 +73,7 @@ authRouter.get('/logout', isLoggedIn, (req, res, next) => {
 
   //  - destroy the session
   req.session.destroy(function (err) {
-    if (err) next(createError(err));
+    if (err) next(createError(400));
     else {
       //  - set status code and send the response back
       res
@@ -97,6 +93,6 @@ authRouter.get('/me', isLoggedIn, (req, res, next) => {
     .status(200)
     .json(currentUserSessionData);
 })
-
+// GET      'auth/
 
 module.exports = authRouter;

@@ -1,0 +1,26 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const plantSchema = new Schema({
+  commonName: { type: String, required: true },
+  latinName: { type: String, required: true },
+  img: [{ type: String }],
+  characteristics: {
+    Family: { type: String },
+    USDAHardiness: { type: String },
+    knownHazards: { imgUrl: String, text: String },
+    habitats: String,
+    range: String,
+    edibilityRating: String,
+    otherUses: String,
+    weedPotential: String,
+    edicinalRating: String,
+    care: { imgUrl: [String] },
+  },
+  reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+  liked: Number,
+});
+
+const Plant = mongoose.model("Plant", plantSchema);
+
+module.exports = Plant;

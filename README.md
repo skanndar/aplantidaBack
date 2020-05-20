@@ -114,25 +114,25 @@ User model
 Plant model
 
 ```javascript
- {
-   'common name': {type: String, required: true},
-   'latin name': {type: String, required: true},
+{
+  'commonName': {type: String, required: true},
+   'latinName': {type: String, required: true},
    img: [{type: String}],
    characteristics:{
        Family:{type: String},
        'USDA hardiness':{type: String},
-       'known hazards':{imgUrl: String, text: String},
+       'knownHazards':{imgUrl: String, text: String},
        habitats: String,
        range: String,
-       'Edibility Rating': String,
-       'Other uses': String,
-       'Weed potential': String,
-       'Medicinal Rating': String,
+       'edibilityRating': String,
+       'otherUses': String,
+       'weedPotential': String,
+       'edicinalRating': String,
        care: {imgUrl:[String]},
    },
    reviews: [{type: Schema.Types.ObjectId,ref:'Review'}],
    liked: Number
- }
+}
 ```
 
 Review model
@@ -150,18 +150,19 @@ Review model
 
 ## API Endpoints (backend routes)
 
-| HTTP Method | URL                | Request Body                                  | Success status | Error Status | Description                                                                                                                     |
-| ----------- | ------------------ | --------------------------------------------- | -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/auth/profile`    | Saved session                                 | 200            | 404          | Check if user is logged in and return profile page                                                                              |
-| POST        | `/auth/signup`     | {fName, lName, email, genre, password}        | 201            | 404          | Checks if fields not empty (422) and user not exists (409), then create user with encrypted password, and store user in session |
-| POST        | `/auth/login`      | {email, password}                             | 200            | 401          | Checks if fields not empty (422), if user exists (404), and if password matches (404), then stores user in session              |
-| POST        | `/auth/logout`     | (empty)                                       | 204            | 400          | Logs out the user                                                                                                               |
-| GET         | `/plants`          |                                               | 200            | 404          | Show all plants                                                                                                                 |
-| GET         | `/plant/:id`       | {id}                                          | 200            | 404          | Show specific plant                                                                                                             |
-| PUT         | `/user/:id`        | {image, email, password, lName, fName, genre} | 200            | 400          | Edit Profile                                                                                                                    |
-| DELETE      | `/user/delete/:id` | {id}                                          | 201            | 400          | delete user                                                                                                                     |
-| DELETE      | `/review/:id`      | {id}                                          | 200            | 400          | delete review                                                                                                                   |
-| POST        | `/review/`         | {title, text, user...}                        | 201            | 400          | Create and save a new tournament                                                                                                |
+| HTTP Method | URL            | Request Body                                  | Success status | Error Status | Description                                                  |
+| ----------- | -------------- | --------------------------------------------- | -------------- | ------------ | ------------------------------------------------------------ |
+| GET         | `/auth/me`     | (Empty)                                       | 200            | 401          | Check if user is logged in and there is a valid session      |
+| POST        | `/auth/signup` | {fName, lName, email, genre, password}        | 201            | 404          | Checks if fields not empty (422) and user not exists (409), then create user with encrypted password, and store user in session |
+| POST        | `/auth/login`  | {email, password}                             | 200            | 401          | Checks if fields not empty (422), if user exists (404), and if password matches (404), then stores user in session |
+| POST        | `/auth/logout` | (empty)                                       | 204            | 400          | Logs out the user                                            |
+| GET         | `/user/:id`    | (Empty)                                       | 200            | 404          | Check if user is logged in and return profile page           |
+| PUT         | `/user/:id`    | {image, email, password, lName, fName, genre} | 200            | 400          | Edit Profile                                                 |
+| GET         | `/plants`      | (empty)                                       | 200            | 404          | Show all plants                                              |
+| GET         | `/plant/:id`   | {id}                                          | 200            | 404          | Show specific plant                                          |
+| DELETE      | `/user/:id`    | {id}                                          | 201            | 400          | delete user                                                  |
+| DELETE      | `/review/:id`  | {id}                                          | 200            | 400          | delete review                                                |
+| POST        | `/review/`     | {title, text, user...}                        | 201            | 400          | Create and save a new tournament                             |
 
 <br>
 

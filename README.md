@@ -160,6 +160,7 @@ Review model
 | PUT         | `/user/:id`    | {image, email, password, lName, fName, genre} | 200            | 400          | Edit Profile                                                 |
 | GET         | `/plants`      | (empty)                                       | 200            | 404          | Show all plants                                              |
 | GET         | `/plant/:id`   | {id}                                          | 200            | 404          | Show specific plant                                          |
+| POST        | `/plants`      | {searchStr}                                   | 200            | 404          | Show matching plants                                         |
 | DELETE      | `/user/:id`    | {id}                                          | 201            | 400          | delete user                                                  |
 | DELETE      | `/review/:id`  | {id}                                          | 200            | 400          | delete review                                                |
 | POST        | `/review/`     | {title, text, user...}                        | 201            | 400          | Create and save a new tournament                             |

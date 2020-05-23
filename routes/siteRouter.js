@@ -88,12 +88,28 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
     .catch((err) => next(createError(404)));
 });
 
+// // PLANT DETAIL
+// // GET         '/plant/:id'
+// siteRouter.get("/plant/:id", isLoggedIn, (req, res, next) => {
+//   const { id } = req.params;
+
+//   Plant.findById(id)
+//     .populate({
+//       path: "reviews",
+//     })
+//     .then((plant) => {
+//       console.log(plant);
+//       res.status(200).json(plant);
+//     })
+//     .catch((err) => next(createError(404)));
+// });
+
 // PLANT DETAIL
 // GET         '/plant/:id'
-siteRouter.get("/plant/:id", isLoggedIn, (req, res, next) => {
-  const { id } = req.params;
+siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
+  const { name } = req.params;
 
-  Plant.findById(id)
+  Plant.find({latinName:name})
     .populate({
       path: "reviews",
     })

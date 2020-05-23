@@ -6,7 +6,7 @@ const plantSchema = new Schema({
   latinName: { type: String, required: true },
   img: [{ type: String }],
   characteristics: {
-    Family: { type: String },
+    family: { type: String },
     USDAHardiness: { type: String },
     knownHazards: { imgUrl: String, text: String },
     habitats: String,
@@ -14,7 +14,7 @@ const plantSchema = new Schema({
     edibilityRating: String,
     otherUses: String,
     weedPotential: String,
-    edicinalRating: String,
+    medicinalRating: String,
     care: { imgUrl: [String] },
   },
   reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],

@@ -8,7 +8,7 @@ let plants = [
     latinName: "Hippophae rhamnoides",
     img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
     characteristics: {
-      Family: "Elaeagnaceae",
+      family: "Elaeagnaceae",
       USDAHardiness: "3-7",
       knownHazards: {
         imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
@@ -41,7 +41,7 @@ let plants = [
     latinName: "Urtica dioica",
     img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
     characteristics: {
-      Family: "Urticaceae",
+      family: "Urticaceae",
       USDAHardiness: "3-10",
       knownHazards: {
         imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
@@ -76,7 +76,7 @@ let plants = [
       "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
     ],
     characteristics: {
-      Family: "Ginkgoaceae",
+      family: "Ginkgoaceae",
       USDAHardiness: "3-8",
       knownHazards: {
         imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",

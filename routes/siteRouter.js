@@ -72,7 +72,12 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
   const { searchStr } = req.body;
   console.log("searchStr, req.body :>> ", searchStr, req.body);
 
-  Plant.find({ $or: [ {'commonName': {'$regex': searchStr, '$options': 'i'}},{'latinName': {'$regex': searchStr, '$options': 'i'}}] })
+  Plant.find({
+    $or: [
+      { commonName: { $regex: searchStr, $options: "i" } },
+      { latinName: { $regex: searchStr, $options: "i" } },
+    ],
+  })
     .populate({
       path: "reviews",
     })
@@ -127,14 +132,26 @@ siteRouter.delete("/review/:id", isLoggedIn, (req, res, next) => {
 });
 
 // ADD REVIEW
-// POST         '/user/:id'
-siteRouter.post("/review/", isLoggedIn, (req, res, next) => {
+// POST         '/review'
+siteRouter.post("/review", isLoggedIn, (req, res, next) => {
   const { title, text, user, plant, likes, stars } = req.body;
 
   Review.create({ title, text, user, plant, likes, stars })
     .then((review) => {
       console.log(review);
       res.status(200).json(review);
+    })
+    .catch((err) => next(createError(404)));
+});
+
+// GET         '/review'
+siteRouter.get("/review/:plantId", isLoggedIn, (req, res, next) => {
+  const { plantId } = req.params;
+
+  Review.find({ plant: plantId })
+    .then((reviews) => {
+      console.log(reviews);
+      res.status(200).json(reviews);
     })
     .catch((err) => next(createError(404)));
 });

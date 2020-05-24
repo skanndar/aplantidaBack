@@ -12,7 +12,7 @@ cloudinary.config({
 
 const storage = cloudinaryStorage({
   cloudinary: cloudinary,
-  folder: 'QHOPS',
+  folder: 'Aplantida',
   allowedFormats: ['jpg', 'png', 'gif','jpeg']
 });
  

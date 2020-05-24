@@ -1,18 +1,21 @@
 const express = require("express");
-const Admin = require("./../models/admin-model");
+const User = require("./../models/user");
 const router = express.Router();
 const parser = require("../config/cloudinary");
 
 router.post("/profile-picture", parser.single("photo"), (req, res, next) => {
   const image_url = req.file.secure_url;
-  const adminId = req.session.currentUser._id;
-  Admin.findByIdAndUpdate(adminId, { "picture.image_url": image_url }, {new: true})
+  console.log("req.session.currentUser :>> ", req.session.currentUser);
+  const userId = req.session.currentUser._id;
+  User.findByIdAndUpdate(userId, { image: image_url }, { new: true })
 
     .then((user) => {
       req.session.currentUser = user;
-      res.redirect("/profile")
+      console.log(user);
+      res.status(200).json(user);
     })
-    .catch((err) => console.log(err));
+
+    .catch((err) => next(createError(404)));
 });
 
 module.exports = router;

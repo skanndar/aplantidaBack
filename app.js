@@ -11,6 +11,8 @@ require('dotenv').config();
 
 const siteRouter = require('./routes/siteRouter');
 const authRouter = require('./routes/authRouter');
+const cloudinaryRouter = require("./routes/cloudinary-router")
+
 
 
 // MONGOOSE CONNECTION
@@ -70,6 +72,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ROUTER MIDDLEWARE
 app.use('/', siteRouter);
 app.use('/auth', authRouter);
+app.use("/", cloudinaryRouter)
+
 
 
 

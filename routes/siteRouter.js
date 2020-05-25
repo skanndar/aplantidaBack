@@ -21,10 +21,8 @@ siteRouter.get("/user/:id", isLoggedIn, (req, res, next) => {
   console.log("id :>> ", id);
 
   User.findById(id)
-    .populate({
-      path: "reviews",
-      path: "favorites",
-    })
+    .populate("favorites reviews")
+
     .then((user) => {
       console.log(user);
       res.status(200).json(user);
@@ -41,10 +39,8 @@ siteRouter.put("/user", isLoggedIn, (req, res, next) => {
   //check how to handle password
 
   User.findByIdAndUpdate(_id, updatedUser, { new: true })
-    .populate({
-      path: "reviews",
-      path: "favorites",
-    })
+    .populate("favorites reviews")
+
     .then((user) => {
       console.log(user);
       res.status(200).json(user);
@@ -56,9 +52,8 @@ siteRouter.put("/user", isLoggedIn, (req, res, next) => {
 // GET         '/plants'
 siteRouter.get("/plants", isLoggedIn, (req, res, next) => {
   Plant.find()
-    .populate({
-      path: "reviews",
-    })
+    .populate("reviews")
+
     .then((plants) => {
       console.log(plants);
       res.status(200).json(plants);
@@ -78,9 +73,7 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
       { latinName: { $regex: searchStr, $options: "i" } },
     ],
   })
-    .populate({
-      path: "reviews",
-    })
+    .populate("reviews")
     .then((plants) => {
       console.log(plants);
       res.status(200).json(plants);
@@ -109,10 +102,9 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
 siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
   const { name } = req.params;
 
-  Plant.find({latinName:name})
-    .populate({
-      path: "reviews",
-    })
+  Plant.find({ latinName: name })
+    .populate("reviews")
+
     .then((plant) => {
       console.log(plant);
       res.status(200).json(plant);
@@ -134,8 +126,8 @@ siteRouter.delete("/user/:id", isLoggedIn, (req, res, next) => {
     .catch((err) => next(createError(404)));
 });
 
-// DELETE User
-// GET         '/user/:id'
+// DELETE review
+// GET         '/review/:id'
 siteRouter.delete("/review/:id", isLoggedIn, (req, res, next) => {
   const { id } = req.params;
 

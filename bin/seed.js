@@ -999,12 +999,12 @@ let plants = [
 ];
 
 const reviews = [];
-for (let i = 0; i < 15; i++) {
+for (let i = 1; i < 15; i++) {
   reviews.push({
     title: `Aplantida review simulation ${i}`,
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto incidunt error perspiciatis obcaecati accusamus hic a quam! Accusamus dicta ad praesentium nam consequuntur optio architecto ea, perferendis ipsum, cum tempore.`,
-    user: undefined,
-    plant: undefined,
+    user: 382799182348,
+    plant: 181023479124,
     likes: parseInt(Math.random() * 144 * 9),
     stars: parseInt(Math.random() * 144 * 9),
   });
@@ -1033,7 +1033,7 @@ mongoose
     return createReview;
   })
   .then((createdReviews) => {
-    console.log(`Inserted plants: ${createdReviews}`);
+    console.log(`Inserted reviews: ${createdReviews}`);
     // 2. CREATE THE DOCUMENT FROM THE OBJ plant
     const createP = Plant.create(plants);
     return createP;
@@ -1045,7 +1045,7 @@ mongoose
     return createUser;
   })
   .then((createdUser) => {
-    console.log(`Inserted plants: ${createdUser}`);
+    console.log(`Inserted user: ${createdUser}`);
 
     // 3. CLOSE THE DB CONNECTION
 

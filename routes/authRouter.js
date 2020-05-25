@@ -61,10 +61,8 @@ authRouter.post(
 authRouter.post("/login", isNotLoggedIn, validationLogin, (req, res, next) => {
   const { email, password } = req.body;
   User.findOne({ email })
-    .populate({
-      path: "reviews",
-      path: "favorites",
-    })
+    .populate("favorites reviews")
+
     .then((user) => {
       //  - check if user exists in the DB
       if (!user) {
@@ -105,7 +103,9 @@ authRouter.get("/logout", isLoggedIn, (req, res, next) => {
 authRouter.get("/profile", isLoggedIn, (req, res, next) => {
   const userId = req.session.currentUser._id;
   User.findById(userId)
+    .populate("favorites reviews")
     .then((user) => {
+      console.log("profile user :>> ", user);
       res.status(200).json(user);
     })
     .catch((err) => console.log(err));

@@ -61,6 +61,10 @@ authRouter.post(
 authRouter.post("/login", isNotLoggedIn, validationLogin, (req, res, next) => {
   const { email, password } = req.body;
   User.findOne({ email })
+    .populate({
+      path: "reviews",
+      path: "favorites",
+    })
     .then((user) => {
       //  - check if user exists in the DB
       if (!user) {

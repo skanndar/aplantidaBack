@@ -105,7 +105,7 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
 // });
 
 // PLANT DETAIL
-// GET         '/plant/:id'
+// GET         '/plant/:name'
 siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
   const { name } = req.params;
 

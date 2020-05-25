@@ -101,6 +101,16 @@ authRouter.get("/logout", isLoggedIn, (req, res, next) => {
   });
 });
 
+// GET    '/auth/profile'
+authRouter.get("/profile", isLoggedIn, (req, res, next) => {
+  const userId = req.session.currentUser._id;
+  User.findById(userId)
+    .then((user) => {
+      res.status(200).json(user);
+    })
+    .catch((err) => console.log(err));
+});
+
 // GET    '/auth/me'
 authRouter.get("/me", isLoggedIn, (req, res, next) => {
   //  - check if the user IS logged in using helper function (check if session exists)

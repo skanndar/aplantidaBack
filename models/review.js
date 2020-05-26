@@ -3,8 +3,6 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema(
   {
-    plantIndex: Number,
-    userIndex: Number,
     title: { type: String, required: true },
     text: String,
     user: { type: Schema.Types.ObjectId, ref: "User" },

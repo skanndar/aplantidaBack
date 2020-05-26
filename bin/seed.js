@@ -1045,7 +1045,6 @@ mongoose
   })
   .then((x) => x.connection.dropDatabase())
   .then(async () => {
-
     // 1. CREATE PLANTS AND USERS
     const createdPlants = await Plant.create(plants);
     const createdUsers = await User.create(users);
@@ -1056,8 +1055,6 @@ mongoose
     // CREATE REVIEWS MATRIX WITH PLANT AND USER ID'S
     const reviewsMatrix = createdPlants.map((plant, plantIndex) => {
       return createdUsers.map((user, userIndex) => ({
-        plantIndex,
-        userIndex,
         title: titles[Math.floor(Math.random() * 3)],
         text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto incidunt error perspiciatis obcaecati accusamus hic a quam! Accusamus dicta ad praesentium nam consequuntur optio architecto ea, perferendis ipsum, cum tempore.`,
         user: user._id,
@@ -1077,29 +1074,56 @@ mongoose
 
     const updatedUsers = createdUsers;
     const updatedPlants = createdPlants;
-
     // Update users and plants and add the ids of the newly created reviews
+    // createdReviews.forEach((review) => {
+    //   updatedUsers[review.userIndex].reviews.push(review._id);
+    //   updatedPlants[review.plantIndex].reviews.push(review._id);
+    // });
+
+    const usersDict = {};
+    const plantsDict = {};
+
     createdReviews.forEach((review) => {
-      updatedUsers[review.userIndex].reviews.push(review._id);
-      updatedPlants[review.plantIndex].reviews.push(review._id);
+      if (usersDict[review.user]) usersDict[review.user].push(review._id);
+      else usersDict[review.user] = [review._id];
+
+      if (plantsDict[review.plant]) plantsDict[review.plant].push(review._id);
+      else plantsDict[review.plant] = [review._id];
     });
 
+    console.log("usersDict :>> ", usersDict);
+    console.log("plantsDict :>> ", plantsDict);
+
     await Promise.all(
-      updatedUsers.map((user) =>
-        User.findByIdAndUpdate(user._id, { $push: { reviews: user.reviews } })
+      Object.keys(usersDict).map((userId) =>
+        User.findByIdAndUpdate(userId, { $set: { reviews: usersDict[userId] } })
       )
     );
     console.log(`Updated ${updatedUsers.length} user documents with reviews.`);
 
     await Promise.all(
-      updatedPlants.map((plant) =>
-        Plant.findByIdAndUpdate(plant._id, {
-          $push: { reviews: plant.reviews },
+      Object.keys(plantsDict).map((plantId) =>
+        Plant.findByIdAndUpdate(plantId, {
+          $set: { reviews: plantsDict[plantId] },
         })
       )
     );
     console.log(
       `Updated ${updatedPlants.length} plant documents with reviews.`
+    );
+    let counter = 0;
+    const plantIds = createdPlants.map((plant) => plant._id);
+
+    await Promise.all(
+      Object.keys(usersDict).map((userId) => {
+        const start = counter % 30;
+        const end = start + 5;
+        const someFavorites = plantIds.slice(start, end);
+        counter += 5;
+        return User.findByIdAndUpdate(userId, {
+          $set: { favorites: someFavorites },
+        });
+      })
     );
 
     return;

@@ -1,5 +1,6 @@
 const express = require("express");
 const siteRouter = express.Router();
+const mongoose = require("mongoose");
 
 const createError = require("http-errors");
 
@@ -31,7 +32,7 @@ siteRouter.get("/user/:id", isLoggedIn, (req, res, next) => {
 });
 
 // EDIT PROFILE
-// PUT         '/user/:id'
+// PUT         '/user/'
 siteRouter.put("/user", isLoggedIn, (req, res, next) => {
   const { _id } = req.session.currentUser;
   const { image, email, lName, fName, genre } = req.body;
@@ -44,6 +45,33 @@ siteRouter.put("/user", isLoggedIn, (req, res, next) => {
     .then((user) => {
       console.log(user);
       res.status(200).json(user);
+    })
+    .catch((err) => next(createError(404)));
+});
+
+// EDIT PLANT, TO ADD ONE REVIEW ID
+// PUT         '/plant/'
+siteRouter.put("/plant", isLoggedIn, (req, res, next) => {
+  // const { _id } = req.session.currentUser;
+  console.log("req.body :>> ", req.body);
+  const { reviewId, plant } = req.body;
+  const id = mongoose.Types.ObjectId(plant);
+  console.log("ObjectId :>> ", id);
+  console.log("plant === id, plant == id :>> ", plant === id, plant == id);
+  // add one review id to plant
+
+  // User.findById(id)
+  // .populate("favorites reviews")
+
+  Plant.findByIdAndUpdate(
+    id,
+    { $addToSet: { reviews: reviewId } },
+    { new: true }
+  )
+    .populate("favorites reviews")
+    .then((updatedPlant) => {
+      console.log("updatedPlant :>> ", updatedPlant);
+      res.status(200).json(updatedPlant);
     })
     .catch((err) => next(createError(404)));
 });
@@ -102,11 +130,13 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
 siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
   const { name } = req.params;
 
-  Plant.find({ latinName: name })
+  Plant.findOne({ latinName: name })
     .populate("reviews")
 
     .then((plant) => {
-      console.log(plant);
+      plant.reviews.sort((a, b) => b.created_at - a.created_at);
+
+      console.log("plant --> ", plant.reviews);
       res.status(200).json(plant);
     })
     .catch((err) => next(createError(404)));
@@ -141,15 +171,32 @@ siteRouter.delete("/review/:id", isLoggedIn, (req, res, next) => {
 
 // ADD REVIEW
 // POST         '/review'
-siteRouter.post("/review", isLoggedIn, (req, res, next) => {
-  const { title, text, user, plant, likes, stars } = req.body;
-
-  Review.create({ title, text, user, plant, likes, stars })
-    .then((review) => {
-      console.log(review);
-      res.status(200).json(review);
-    })
-    .catch((err) => next(createError(404)));
+siteRouter.post("/review", isLoggedIn, async (req, res, next) => {
+  let { title, text, user, plant, likes, stars } = req.body;
+  try {
+    const newReview = await Review.create({
+      title,
+      text,
+      user,
+      plant,
+      likes,
+      stars,
+    });
+    console.log("created review :>> ", newReview);
+    await User.findByIdAndUpdate(
+      user,
+      { $addToSet: { reviews: newReview._id } },
+      { new: true }
+    );
+    await Plant.findByIdAndUpdate(
+      plant,
+      { $addToSet: { reviews: newReview._id } },
+      { new: true }
+    );
+    res.status(200).json(newReview);
+  } catch (error) {
+    next(createError(404));
+  }
 });
 
 // GET         '/review'

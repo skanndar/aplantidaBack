@@ -1045,15 +1045,13 @@ mongoose
   })
   .then((x) => x.connection.dropDatabase())
   .then(async () => {
-
-    // 1. CREATE PLANTS AND USERS
-    const createdPlants = await Plant.create(plants);
+    // 2. CREATE THE DOCUMENT FROM THE OBJ review
+    const createdPlants = await User.create(plants);
     const createdUsers = await User.create(users);
 
     console.log(`Inserted reviews,: ${createdPlants.length}`);
     console.log(`Inserted user,: ${createdUsers.length}`);
 
-    // CREATE REVIEWS MATRIX WITH PLANT AND USER ID'S
     const reviewsMatrix = createdPlants.map((plant, plantIndex) => {
       return createdUsers.map((user, userIndex) => ({
         plantIndex,
@@ -1067,12 +1065,12 @@ mongoose
       }));
     });
 
-    console.log("reviewsMatrix :>> ", reviewsMatrix.length);
-    // FLATEN THE MATRIX
-    const reviews = reviewsMatrix.flat();
-    console.log("reviews after .flat():>> ", reviews.length);
+    console.log("reviewsMatrix :>> ", reviewsMatrix);
 
-    // 1. CREATE REVIEWS
+    const reviews = reviewsMatrix.flat();
+
+    console.log("reviews after .flat():>> ", reviews);
+
     const createdReviews = await Review.create(reviews);
 
     const updatedUsers = createdUsers;

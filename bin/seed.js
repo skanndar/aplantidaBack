@@ -1120,7 +1120,7 @@ mongoose
         const end = start + 5;
         const someFavorites = plantIds.slice(start, end);
         counter += 5;
-        return User.findByIdAndUpdate(userId, {
+        return User.findByIdAndUpdate(userId, {s
           $set: { favorites: someFavorites },
         });
       })

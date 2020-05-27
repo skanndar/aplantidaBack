@@ -1,7 +1,5 @@
 # aplantida
 
-<br>
-
 ## Description
 
 This is app aims to help people recover the lost knowledge of plants. The app helps you to identify plants and its uses with a focus on edibility and medicinal characteristics.

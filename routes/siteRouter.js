@@ -131,8 +131,20 @@ siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
   const { name } = req.params;
 
   Plant.findOne({ latinName: name })
-    .populate("reviews")
-
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "user",
+        model: "User",
+      },
+    })
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "plant",
+        model: "Plant",
+      },
+    })
     .then((plant) => {
       plant.reviews.sort((a, b) => b.created_at - a.created_at);
 

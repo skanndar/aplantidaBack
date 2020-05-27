@@ -103,8 +103,23 @@ authRouter.get("/logout", isLoggedIn, (req, res, next) => {
 authRouter.get("/profile", isLoggedIn, (req, res, next) => {
   const userId = req.session.currentUser._id;
   User.findById(userId)
-    .populate("favorites reviews")
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "plant",
+        model: "Plant",
+      },
+    })
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "user",
+        model: "User",
+      },
+    })
     .then((user) => {
+      user.reviews.sort((a, b) => b.created_at - a.created_at);
       console.log("profile user :>> ", user);
       res.status(200).json(user);
     })

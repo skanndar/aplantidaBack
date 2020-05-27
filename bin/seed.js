@@ -9,7 +9,124 @@ let plants = [
   {
     commonName: "Sea Buckthorn, Seaberry",
     latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
+    characteristics: {
+      family: "Elaeagnaceae",
+      USDAHardiness: "3-7",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
+      },
+      habitats:
+        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
+      range:
+        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(5 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 5928,
+  },
+  {
+    commonName: "Stinging Nettle, California nettle",
+    latinName: "Urtica dioica",
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
+    characteristics: {
+      family: "Urticaceae",
+      USDAHardiness: "3-10",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
+      },
+      habitats:
+        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
+      range:
+        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(4 of 5)",
+      weedPotential: "Yes",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 2123,
+  },
+  {
+    commonName: "Maidenhair Tree, Ginkgo",
+    latinName: "Ginkgo biloba",
+    img: [
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
+    ],
+
+    characteristics: {
+      family: "Ginkgoaceae",
+      USDAHardiness: "3-8",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
+      },
+      habitats:
+        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
+      range: "E. Asia - N. China.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(2 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 728,
+  },
+  {
+    commonName: "Sea Buckthorn, Seaberry",
+    latinName: "Hippophae rhamnoides",
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
     characteristics: {
       family: "Elaeagnaceae",
       USDAHardiness: "3-7",
@@ -42,7 +159,455 @@ let plants = [
   {
     commonName: "Stinging Nettle, California nettle",
     latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
+    characteristics: {
+      family: "Urticaceae",
+      USDAHardiness: "3-10",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
+      },
+      habitats:
+        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
+      range:
+        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(4 of 5)",
+      weedPotential: "Yes",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 1982,
+  },
+  {
+    commonName: "Maidenhair Tree, Ginkgo",
+    latinName: "Ginkgo biloba",
+    img: [
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
+    ],
+    characteristics: {
+      family: "Ginkgoaceae",
+      USDAHardiness: "3-8",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
+      },
+      habitats:
+        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
+      range: "E. Asia - N. China.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(2 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 982,
+  },
+  {
+    commonName: "Sea Buckthorn, Seaberry",
+    latinName: "Hippophae rhamnoides",
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
+    characteristics: {
+      family: "Elaeagnaceae",
+      USDAHardiness: "3-7",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
+      },
+      habitats:
+        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[982, 17, 244].",
+      range:
+        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(5 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 5,
+  },
+  {
+    commonName: "Stinging Nettle, California nettle",
+    latinName: "Urtica dioica",
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
+    characteristics: {
+      family: "Urticaceae",
+      USDAHardiness: "3-10",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
+      },
+      habitats:
+        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 982].",
+      range:
+        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(4 of 5)",
+      weedPotential: "Yes",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 1982,
+  },
+  {
+    commonName: "Maidenhair Tree, Ginkgo",
+    latinName: "Ginkgo biloba",
+    img: [
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
+    ],
+    characteristics: {
+      family: "Ginkgoaceae",
+      USDAHardiness: "3-8",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
+      },
+      habitats:
+        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
+      range: "E. Asia - N. China.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(2 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 98,
+  },
+  {
+    commonName: "Sea Buckthorn, Seaberry",
+    latinName: "Hippophae rhamnoides",
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
+    characteristics: {
+      family: "Elaeagnaceae",
+      USDAHardiness: "3-7",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
+      },
+      habitats:
+        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[98, 17, 244].",
+      range:
+        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(5 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 5,
+  },
+  {
+    commonName: "Stinging Nettle, California nettle",
+    latinName: "Urtica dioica",
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
+    characteristics: {
+      family: "Urticaceae",
+      USDAHardiness: "3-10",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
+      },
+      habitats:
+        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 98].",
+      range:
+        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(4 of 5)",
+      weedPotential: "Yes",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 98,
+  },
+  {
+    commonName: "Maidenhair Tree, Ginkgo",
+    latinName: "Ginkgo biloba",
+    img: [
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
+    ],
+    characteristics: {
+      family: "Ginkgoaceae",
+      USDAHardiness: "3-8",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
+      },
+      habitats:
+        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
+      range: "E. Asia - N. China.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(2 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 98,
+  },
+  {
+    commonName: "Sea Buckthorn, Seaberry",
+    latinName: "Hippophae rhamnoides",
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
+    characteristics: {
+      family: "Elaeagnaceae",
+      USDAHardiness: "3-7",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
+      },
+      habitats:
+        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[98, 17, 244].",
+      range:
+        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(5 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 5,
+  },
+  {
+    commonName: "Stinging Nettle, California nettle",
+    latinName: "Urtica dioica",
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
+    characteristics: {
+      family: "Urticaceae",
+      USDAHardiness: "3-10",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
+      },
+      habitats:
+        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 98].",
+      range:
+        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(4 of 5)",
+      weedPotential: "Yes",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 98,
+  },
+  {
+    commonName: "Maidenhair Tree, Ginkgo",
+    latinName: "Ginkgo biloba",
+    img: [
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
+    ],
+    characteristics: {
+      family: "Ginkgoaceae",
+      USDAHardiness: "3-8",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
+      },
+      habitats:
+        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
+      range: "E. Asia - N. China.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(2 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 1982,
+  },
+  {
+    commonName: "Sea Buckthorn, Seaberry",
+    latinName: "Hippophae rhamnoides",
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
+    characteristics: {
+      family: "Elaeagnaceae",
+      USDAHardiness: "3-7",
+      knownHazards: {
+        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
+        text:
+          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
+      },
+      habitats:
+        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
+      range:
+        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
+      edibilityRating: "(5 of 5)",
+      otherUses: "(5 of 5)",
+      weedPotential: "No",
+      medicinalRating: "(5 of 5)",
+      care: {
+        imgUrl: [
+          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
+          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
+        ],
+      },
+    },
+    reviews: [],
+    liked: 5,
+  },
+  {
+    commonName: "Stinging Nettle, California nettle",
+    latinName: "Urtica dioica",
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
     characteristics: {
       family: "Urticaceae",
       USDAHardiness: "3-10",
@@ -75,8 +640,11 @@ let plants = [
     commonName: "Maidenhair Tree, Ginkgo",
     latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
     ],
     characteristics: {
       family: "Ginkgoaceae",
@@ -108,7 +676,12 @@ let plants = [
   {
     commonName: "Sea Buckthorn, Seaberry",
     latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
     characteristics: {
       family: "Elaeagnaceae",
       USDAHardiness: "3-7",
@@ -141,7 +714,11 @@ let plants = [
   {
     commonName: "Stinging Nettle, California nettle",
     latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
     characteristics: {
       family: "Urticaceae",
       USDAHardiness: "3-10",
@@ -174,8 +751,11 @@ let plants = [
     commonName: "Maidenhair Tree, Ginkgo",
     latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
     ],
     characteristics: {
       family: "Ginkgoaceae",
@@ -207,7 +787,12 @@ let plants = [
   {
     commonName: "Sea Buckthorn, Seaberry",
     latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
     characteristics: {
       family: "Elaeagnaceae",
       USDAHardiness: "3-7",
@@ -240,7 +825,11 @@ let plants = [
   {
     commonName: "Stinging Nettle, California nettle",
     latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
     characteristics: {
       family: "Urticaceae",
       USDAHardiness: "3-10",
@@ -273,8 +862,11 @@ let plants = [
     commonName: "Maidenhair Tree, Ginkgo",
     latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
     ],
     characteristics: {
       family: "Ginkgoaceae",
@@ -306,7 +898,12 @@ let plants = [
   {
     commonName: "Sea Buckthorn, Seaberry",
     latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
+    img: [
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
+    ],
     characteristics: {
       family: "Elaeagnaceae",
       USDAHardiness: "3-7",
@@ -339,7 +936,11 @@ let plants = [
   {
     commonName: "Stinging Nettle, California nettle",
     latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
+    img: [
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
+    ],
     characteristics: {
       family: "Urticaceae",
       USDAHardiness: "3-10",
@@ -372,8 +973,11 @@ let plants = [
     commonName: "Maidenhair Tree, Ginkgo",
     latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
     ],
     characteristics: {
       family: "Ginkgoaceae",
@@ -405,107 +1009,13 @@ let plants = [
   {
     commonName: "Sea Buckthorn, Seaberry",
     latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
-      family: "Elaeagnaceae",
-      USDAHardiness: "3-7",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
-      },
-      habitats:
-        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
-      range:
-        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(5 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 5,
-  },
-  {
-    commonName: "Stinging Nettle, California nettle",
-    latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
-      family: "Urticaceae",
-      USDAHardiness: "3-10",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
-      },
-      habitats:
-        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
-      range:
-        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(4 of 5)",
-      weedPotential: "Yes",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Maidenhair Tree, Ginkgo",
-    latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://cdn.dr.hauschka.com/images/system/plant_library/hippophae-rhamnoides-l.jpg",
+      "https://www.plantea.com.hr/wp-content/uploads/2015/08/pasji-trn-6.jpg",
+      "https://ak.picdn.net/shutterstock/videos/4355804/thumb/1.jpg",
+      "https://footage.framepool.com/shotimg/qf/101983993-common-sea-buckthorn-oleaster-family-branch-blossom.jpg",
     ],
     characteristics: {
-      family: "Ginkgoaceae",
-      USDAHardiness: "3-8",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
-      },
-      habitats:
-        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
-      range: "E. Asia - N. China.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(2 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Sea Buckthorn, Seaberry",
-    latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
       family: "Elaeagnaceae",
       USDAHardiness: "3-7",
       knownHazards: {
@@ -537,107 +1047,12 @@ let plants = [
   {
     commonName: "Stinging Nettle, California nettle",
     latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
-      family: "Urticaceae",
-      USDAHardiness: "3-10",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
-      },
-      habitats:
-        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
-      range:
-        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(4 of 5)",
-      weedPotential: "Yes",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Maidenhair Tree, Ginkgo",
-    latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://ak.picdn.net/shutterstock/videos/10167959/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1038073355/thumb/1.jpg",
+      "https://ak.picdn.net/shutterstock/videos/1035646784/thumb/11.jpg",
     ],
     characteristics: {
-      family: "Ginkgoaceae",
-      USDAHardiness: "3-8",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
-      },
-      habitats:
-        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
-      range: "E. Asia - N. China.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(2 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Sea Buckthorn, Seaberry",
-    latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
-      family: "Elaeagnaceae",
-      USDAHardiness: "3-7",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
-      },
-      habitats:
-        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
-      range:
-        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(5 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 5,
-  },
-  {
-    commonName: "Stinging Nettle, California nettle",
-    latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
       family: "Urticaceae",
       USDAHardiness: "3-10",
       knownHazards: {
@@ -669,305 +1084,11 @@ let plants = [
     commonName: "Maidenhair Tree, Ginkgo",
     latinName: "Ginkgo biloba",
     img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
-    ],
-    characteristics: {
-      family: "Ginkgoaceae",
-      USDAHardiness: "3-8",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
-      },
-      habitats:
-        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
-      range: "E. Asia - N. China.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(2 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Sea Buckthorn, Seaberry",
-    latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
-      family: "Elaeagnaceae",
-      USDAHardiness: "3-7",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
-      },
-      habitats:
-        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
-      range:
-        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(5 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 5,
-  },
-  {
-    commonName: "Stinging Nettle, California nettle",
-    latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
-      family: "Urticaceae",
-      USDAHardiness: "3-10",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
-      },
-      habitats:
-        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
-      range:
-        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(4 of 5)",
-      weedPotential: "Yes",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Maidenhair Tree, Ginkgo",
-    latinName: "Ginkgo biloba",
-    img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
-    ],
-    characteristics: {
-      family: "Ginkgoaceae",
-      USDAHardiness: "3-8",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
-      },
-      habitats:
-        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
-      range: "E. Asia - N. China.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(2 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Sea Buckthorn, Seaberry",
-    latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
-      family: "Elaeagnaceae",
-      USDAHardiness: "3-7",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
-      },
-      habitats:
-        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
-      range:
-        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(5 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 5,
-  },
-  {
-    commonName: "Stinging Nettle, California nettle",
-    latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
-      family: "Urticaceae",
-      USDAHardiness: "3-10",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
-      },
-      habitats:
-        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
-      range:
-        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(4 of 5)",
-      weedPotential: "Yes",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Maidenhair Tree, Ginkgo",
-    latinName: "Ginkgo biloba",
-    img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
-    ],
-    characteristics: {
-      family: "Ginkgoaceae",
-      USDAHardiness: "3-8",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The seed contains a mildly acrimonious principle that is unstable when heated. It is therefore best to cook the seed before eating it to ensure any possible toxicity is destroyed. This acrimonious principle is probably 4'-methoxypyridoxine, which can destroy vitamin B6[237]. It is more toxic for children, but the raw nuts would have to be eaten often over a period of time for the negative effects to become apparent[237]. Avoid if known allergy to Ginkgo or cross-react species (cashew, poison ivy). Not recommended for children. Avoid if on blood thinning medication (e.g. warfarin). Discontinue prior to surgery. Avoid parenteral use as possible hypotension, shock, dizziness. Excessive seed ingestion can cause 'gin-man' food poisoning [301].",
-      },
-      habitats:
-        "Found wild in only 2 localities at Guizhou and on the Anhui/Zhejiang border[200], where it grows on rich sandy soils[147].",
-      range: "E. Asia - N. China.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(2 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Sea Buckthorn, Seaberry",
-    latinName: "Hippophae rhamnoides",
-    img: ["https://pfaf.org/Admin/PlantImages/HippophaeRhamnoides.jpg"],
-    characteristics: {
-      family: "Elaeagnaceae",
-      USDAHardiness: "3-7",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "Some reports suggest that the fruit is poisonous[13, 100], whilst it may be very acid it is most definitely not poisonous[65]. Avoid during pregnancy.",
-      },
-      habitats:
-        "Usually found near the coast, often forming thickets on fixed dunes and sea cliffs[9, 17, 244].",
-      range:
-        "Europe, including Britain, from Norway south and east to Spain and Asia to Japan and the Himalayas.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(5 of 5)",
-      weedPotential: "No",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water2.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water3.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 5,
-  },
-  {
-    commonName: "Stinging Nettle, California nettle",
-    latinName: "Urtica dioica",
-    img: ["https://pfaf.org/Admin/PlantImages/UrticaDioica.jpg"],
-    characteristics: {
-      family: "Urticaceae",
-      USDAHardiness: "3-10",
-      knownHazards: {
-        imgUrl: "https://pfaf.org/user/images/PFAF_searchV1b/hazardsmall.png",
-        text:
-          "The leaves of the plants have stinging hairs, causing irritation to the skin[21, 200]. This action is neutralized by heat or by thorough drying, so the cooked leaves are perfectly safe and nutritious[200]. However, only young leaves should be used because older leaves develop gritty particles called cystoliths which act as an irritant to the kidneys[172]. Possible interference with allopathic drugs for diabetes mellitus, hypertension. Central nervous system depression drugs (e.g. morphine, alcohol) may also interact with nettle. Avoid during pregnancy [301].",
-      },
-      habitats:
-        "Waste ground, hedgerows, woods etc, preferring a rich soil and avoiding acid soils[4, 9].",
-      range:
-        "Temperate regions throughout the world, including Britain. The plant has become naturalized at higher elevations in the Tropics.",
-      edibilityRating: "(5 of 5)",
-      otherUses: "(4 of 5)",
-      weedPotential: "Yes",
-      medicinalRating: "(5 of 5)",
-      care: {
-        imgUrl: [
-          "https://pfaf.org/user/images/PFAF_Icon/H4.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/water1.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/partsun.jpg",
-          "https://pfaf.org/user/images/PFAF_Icon/sun.jpg",
-        ],
-      },
-    },
-    reviews: [],
-    liked: 9,
-  },
-  {
-    commonName: "Maidenhair Tree, Ginkgo",
-    latinName: "Ginkgo biloba",
-    img: [
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba2.jpg",
-      "https://pfaf.org/Admin/PlantImages/GinkgoBiloba3.jpg",
+      "https://thumbs.dreamstime.com/b/row-yellow-ginkgo-tree-nami-island-korea-80723030.jpg",
+      "https://www.10wallpaper.com/wallpaper/1366x768/1207/Ginkgo_biloba_leaves-Plant_wallpaper_1366x768.jpg",
+      "https://i.pinimg.com/originals/a9/c3/5e/a9c35edbca21d09bc75fb702e7837119.jpg",
+      "https://lh3.googleusercontent.com/proxy/_0lkQYCanPMnupDofMztz9n3kMy7qmpm5UOhTuEBGXj7B8cSMzOpqBFi4iBwYo054mDFAKV7WARQN0liI6Jy1pjltlagZuyDrEpSVGYMLO8aPm6cFt63w0MZgK9fCMWhSHbBg1wFTA=s0",
+      "https://images.squarespace-cdn.com/content/v1/5b4d8bf3d274cb964b3bf7dc/1544412635461-9CCHYPYDO9PU3O0Q4ORC/ke17ZwdGBToddI8pDm48kHmsQLiNe_wraAMD99sZxV9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIj_uzRpgXOFUTkPs52Ns2sHuAvuSHmErtcrc4dStKIm4KMshLAGzx4R3EDFOm1kBS/1.jpg",
     ],
     characteristics: {
       family: "Ginkgoaceae",
@@ -1060,7 +1181,7 @@ mongoose
         user: user._id,
         plant: plant._id,
         likes: parseInt(Math.random() * 144 * 9),
-        stars: parseInt(Math.random() * 144 * 9),
+        stars: parseInt(Math.random() * 5),
       }));
     });
 

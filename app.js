@@ -66,7 +66,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // ROUTER MIDDLEWARE
-app.use("/", siteRouter);
+app.use("/api", siteRouter);
 app.use("/auth", authRouter);
 app.use("/", cloudinaryRouter);
 

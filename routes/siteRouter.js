@@ -36,6 +36,7 @@ siteRouter.get("/user/:id", isLoggedIn, (req, res, next) => {
 siteRouter.put("/user", isLoggedIn, (req, res, next) => {
   const { _id } = req.session.currentUser;
   const { image, email, lName, fName, genre } = req.body;
+  console.log("req.body :>> ", req.body);
   const updatedUser = { image, email, lName, fName, genre };
   //check how to handle password
 

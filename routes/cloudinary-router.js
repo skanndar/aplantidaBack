@@ -8,7 +8,21 @@ router.post("/profile-picture", parser.single("photo"), (req, res, next) => {
   console.log("req.session.currentUser :>> ", req.session.currentUser);
   const userId = req.session.currentUser._id;
   User.findByIdAndUpdate(userId, { image: image_url }, { new: true })
-
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "plant",
+        model: "Plant",
+      },
+    })
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "user",
+        model: "User",
+      },
+    })
     .then((user) => {
       req.session.currentUser = user;
       console.log(user);

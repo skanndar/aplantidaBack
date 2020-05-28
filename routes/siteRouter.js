@@ -108,6 +108,52 @@ siteRouter.put("/user-favorites", isLoggedIn, (req, res, next) => {
     .catch((err) => next(createError(404)));
 });
 
+// EDIT PROFILE TO DELETE FAVORITE
+// PUT         '/favorites/'
+siteRouter.put("/favorites", isLoggedIn, (req, res, next) => {
+  const { _id } = req.session.currentUser;
+  console.log("req.body :>> ", req.body, _id);
+  const { plantId, action } = req.body;
+  let effect;
+
+  console.log(action === "remove");
+
+  if (action === "add") {
+    effect = "$addToSet";
+  } else if (action === "remove") {
+    effect = "$pull";
+  } else {
+    return next(createError(500));
+  }
+
+  User.findByIdAndUpdate(
+    _id,
+    { [effect]: { favorites: plantId } },
+    { new: true }
+  )
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
+    })
+    .then((user) => {
+      console.log("user after delete plant :>> ", user);
+      req.session.currentUser = user;
+      res.status(200).json(user);
+    })
+    .catch((err) => next(createError(404)));
+});
+
 // EDIT PLANT, TO ADD ONE REVIEW ID
 // PUT         '/plant/'
 siteRouter.put("/plant", isLoggedIn, (req, res, next) => {

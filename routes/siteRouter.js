@@ -22,7 +22,21 @@ siteRouter.get("/user/:id", isLoggedIn, (req, res, next) => {
   console.log("id :>> ", id);
 
   User.findById(id)
-    .populate("favorites reviews")
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
+    })
 
     .then((user) => {
       console.log(user);
@@ -41,10 +55,54 @@ siteRouter.put("/user", isLoggedIn, (req, res, next) => {
   //check how to handle password
 
   User.findByIdAndUpdate(_id, updatedUser, { new: true })
-    .populate("favorites reviews")
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
+    })
 
     .then((user) => {
       console.log(user);
+      res.status(200).json(user);
+    })
+    .catch((err) => next(createError(404)));
+});
+
+// EDIT PROFILE TO DELETE FAVORITE
+// PUT         '/user-favorites/'
+siteRouter.put("/user-favorites", isLoggedIn, (req, res, next) => {
+  const { _id } = req.session.currentUser;
+  console.log("req.body :>> ", req.body, _id);
+  const { plantId } = req.body;
+
+  User.findByIdAndUpdate(_id, { $pull: { favorites: plantId } }, { new: true })
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
+    })
+    .then((user) => {
+      console.log("user after delete plant :>> ", user);
       res.status(200).json(user);
     })
     .catch((err) => next(createError(404)));
@@ -69,7 +127,21 @@ siteRouter.put("/plant", isLoggedIn, (req, res, next) => {
     { $addToSet: { reviews: reviewId } },
     { new: true }
   )
-    .populate("favorites reviews")
+    .populate("favorites")
+    .populate({
+      path: "reviews",
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
+    })
     .then((updatedPlant) => {
       console.log("updatedPlant :>> ", updatedPlant);
       res.status(200).json(updatedPlant);
@@ -110,22 +182,6 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
     .catch((err) => next(createError(404)));
 });
 
-// // PLANT DETAIL
-// // GET         '/plant/:id'
-// siteRouter.get("/plant/:id", isLoggedIn, (req, res, next) => {
-//   const { id } = req.params;
-
-//   Plant.findById(id)
-//     .populate({
-//       path: "reviews",
-//     })
-//     .then((plant) => {
-//       console.log(plant);
-//       res.status(200).json(plant);
-//     })
-//     .catch((err) => next(createError(404)));
-// });
-
 // PLANT DETAIL
 // GET         '/plant/:name'
 siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
@@ -146,13 +202,6 @@ siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
         },
       ],
     })
-    // .populate({
-    //   path: "reviews",
-    //   populate: {
-    //     path: "plant",
-    //     model: "Plant",
-    //   },
-    // })
     .then((plant) => {
       plant.reviews.sort((a, b) => b.created_at - a.created_at);
 

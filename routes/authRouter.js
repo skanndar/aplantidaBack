@@ -106,21 +106,21 @@ authRouter.get("/profile", isLoggedIn, (req, res, next) => {
     .populate("favorites")
     .populate({
       path: "reviews",
-      populate: {
-        path: "plant",
-        model: "Plant",
-      },
-    })
-    .populate({
-      path: "reviews",
-      populate: {
-        path: "user",
-        model: "User",
-      },
+      model: "Review",
+      populate: [
+        {
+          path: "user",
+          model: "User",
+        },
+        {
+          path: "plant",
+          model: "Plant",
+        },
+      ],
     })
     .then((user) => {
       user.reviews.sort((a, b) => b.created_at - a.created_at);
-      console.log("profile user :>> ", user);
+      // console.log("profile user :>> ", user);
       res.status(200).json(user);
     })
     .catch((err) => console.log(err));

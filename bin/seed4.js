@@ -1469,18 +1469,6 @@ let plants = [
   },
 ];
 
-// const reviews = [];
-// for (let i = 1; i < 15; i++) {
-//   reviews.push({
-//     title: `Aplantida review simulation ${i}`,
-//     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto incidunt error perspiciatis obcaecati accusamus hic a quam! Accusamus dicta ad praesentium nam consequuntur optio architecto ea, perferendis ipsum, cum tempore.`,
-//     user: 382799182348,
-//     plant: 181023479124,
-//     likes: parseInt(Math.random() * 144 * 9),
-//     stars: parseInt(Math.random() * 144 * 9),
-//   });
-// }
-
 const users = [
   {
     email: "skanndar@gmail.com",

@@ -307,7 +307,7 @@ siteRouter.post("/review", isLoggedIn, async (req, res, next) => {
       plant,
       { $addToSet: { reviews: newReview._id } },
       { new: true }
-    );
+    )
     res.status(200).json(newReview);
   } catch (error) {
     next(createError(404));

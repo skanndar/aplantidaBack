@@ -102,6 +102,7 @@ siteRouter.put("/user-favorites", isLoggedIn, (req, res, next) => {
       ],
     })
     .then((user) => {
+      req.session.currentUser = user;
       console.log("user after delete plant :>> ", user);
       res.status(200).json(user);
     })
@@ -307,7 +308,7 @@ siteRouter.post("/review", isLoggedIn, async (req, res, next) => {
       plant,
       { $addToSet: { reviews: newReview._id } },
       { new: true }
-    )
+    );
     res.status(200).json(newReview);
   } catch (error) {
     next(createError(404));

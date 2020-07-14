@@ -1495,10 +1495,11 @@ const users = [
 ];
 const titles = ["Super good", "Loved it", "Just ok!", "Not bad for a plant"];
 
-// I want to have reviews pointing to ONE users and ONE plants,(1-n)
+// Reviews pointing to ONE users and ONE plants,(1-n)
 // Users pointing to MANY reviews and MANY plants (but not all if possible) (n-m)
 // Plants pointing to MANY reviews (1-n)
 
+//Stablish db connection
 mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
@@ -1541,9 +1542,11 @@ mongoose
     //   updatedPlants[review.plantIndex].reviews.push(review._id);
     // });
 
+    // create user and plant dictionary
     const usersDict = {};
     const plantsDict = {};
 
+    //Assign review id's to user or plant on the dictionary
     createdReviews.forEach((review) => {
       if (usersDict[review.user]) usersDict[review.user].push(review._id);
       else usersDict[review.user] = [review._id];
@@ -1555,6 +1558,7 @@ mongoose
     console.log("usersDict :>> ", usersDict);
     console.log("plantsDict :>> ", plantsDict);
 
+    // Update all the users on the db with review id's
     await Promise.all(
       Object.keys(usersDict).map((userId) =>
         User.findByIdAndUpdate(userId, { $set: { reviews: usersDict[userId] } })
@@ -1562,6 +1566,7 @@ mongoose
     );
     console.log(`Updated ${updatedUsers.length} user documents with reviews.`);
 
+    // Update all the plants on the db with review id's
     await Promise.all(
       Object.keys(plantsDict).map((plantId) =>
         Plant.findByIdAndUpdate(plantId, {
@@ -1575,9 +1580,10 @@ mongoose
     let counter = 0;
     const plantIds = createdPlants.map((plant) => plant._id);
 
+    // 5 different favorite plants per user
     await Promise.all(
       Object.keys(usersDict).map((userId) => {
-        const start = counter % 30;
+        const start = counter % 40;
         const end = start + 5;
         const someFavorites = plantIds.slice(start, end);
         counter += 5;

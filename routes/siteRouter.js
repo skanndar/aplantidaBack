@@ -223,7 +223,7 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
   })
     .populate("reviews")
     .then((plants) => {
-      console.log(plants);
+      // console.log(plants.length);
       res.status(200).json(plants);
     })
     .catch((err) => next(createError(404)));

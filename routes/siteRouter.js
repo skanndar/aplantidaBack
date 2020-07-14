@@ -230,11 +230,11 @@ siteRouter.post("/plants", isLoggedIn, (req, res, next) => {
 });
 
 // PLANT DETAIL
-// GET         '/plant/:name'
-siteRouter.get("/plant/:name", isLoggedIn, (req, res, next) => {
-  const { name } = req.params;
+// GET         '/plant/:id'
+siteRouter.get("/plant/:id", isLoggedIn, (req, res, next) => {
+  const { id } = req.params;
 
-  Plant.findOne({ latinName: name })
+  Plant.findById(id)
     .populate({
       path: "reviews",
       model: "Review",
